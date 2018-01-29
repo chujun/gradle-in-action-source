@@ -5,6 +5,7 @@ task printVersion {
     description = 'Prints project version.'
 
     doLast {
-        logger.quiet "Version: $version"
+        //可以同时引用project实例($version)和task实例($group),
+        logger.quiet "Version: $version $group $description"
     }
 }
